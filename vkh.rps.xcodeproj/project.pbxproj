@@ -12,6 +12,10 @@
 		848EFB741E87AB2200201B65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848EFB721E87AB2200201B65 /* Main.storyboard */; };
 		848EFB761E87AB2200201B65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848EFB751E87AB2200201B65 /* Assets.xcassets */; };
 		848EFB791E87AB2200201B65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848EFB771E87AB2200201B65 /* LaunchScreen.storyboard */; };
+		848EFBA21E87D36A00201B65 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848EFB9E1E87D36A00201B65 /* Bolts.framework */; };
+		848EFBA31E87D36A00201B65 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848EFB9F1E87D36A00201B65 /* FBSDKCoreKit.framework */; };
+		848EFBA41E87D36A00201B65 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848EFBA01E87D36A00201B65 /* FBSDKLoginKit.framework */; };
+		848EFBA51E87D36A00201B65 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848EFBA11E87D36A00201B65 /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		848EFB751E87AB2200201B65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		848EFB781E87AB2200201B65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		848EFB7A1E87AB2200201B65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		848EFB9E1E87D36A00201B65 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		848EFB9F1E87D36A00201B65 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		848EFBA01E87D36A00201B65 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		848EFBA11E87D36A00201B65 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848EFBA51E87D36A00201B65 /* FBSDKShareKit.framework in Frameworks */,
+				848EFBA21E87D36A00201B65 /* Bolts.framework in Frameworks */,
+				848EFBA31E87D36A00201B65 /* FBSDKCoreKit.framework in Frameworks */,
+				848EFBA41E87D36A00201B65 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +50,7 @@
 		848EFB621E87AB2200201B65 = {
 			isa = PBXGroup;
 			children = (
+				848EFB9D1E87D31200201B65 /* Frameworks */,
 				848EFB6D1E87AB2200201B65 /* vkh.rps */,
 				848EFB6C1E87AB2200201B65 /* Products */,
 			);
@@ -62,6 +75,17 @@
 				848EFB7A1E87AB2200201B65 /* Info.plist */,
 			);
 			path = vkh.rps;
+			sourceTree = "<group>";
+		};
+		848EFB9D1E87D31200201B65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				848EFB9E1E87D36A00201B65 /* Bolts.framework */,
+				848EFB9F1E87D36A00201B65 /* FBSDKCoreKit.framework */,
+				848EFBA01E87D36A00201B65 /* FBSDKLoginKit.framework */,
+				848EFBA11E87D36A00201B65 /* FBSDKShareKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,10 +284,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = vkh.rps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mbair.vkh-rps";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -272,10 +302,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = vkh.rps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mbair.vkh-rps";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -299,6 +335,7 @@
 				848EFB7F1E87AB2200201B65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
